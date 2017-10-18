@@ -14,3 +14,9 @@ This SDK runs on python 3.6.2. This is done most easily with pyenv. On Mac:
 1. ```pyenv virtualenv 3.6.2 ls_sdk```
 1. You will automatically have the correct version of python when you switch
 into the project directory
+
+### License ###
+All rights reserved by Felton Empire Incorporated
+
+Open Source licensing is under consideration. Please contact Ivan with questions
+or for permission to use this code.
