@@ -3,3 +3,4 @@
 *.json
 *.cache
 config.ini
+lightspeed_tokens.db
