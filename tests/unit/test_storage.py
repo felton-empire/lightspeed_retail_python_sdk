@@ -16,9 +16,10 @@ class TestStorageFreshDB:
     def teardown_method(self, method):
         os.remove("test.db")
 
-    def test_storage_file_new(self):
+    def test_storage_file_new_and_lookup(self):
         account = [1, "test_access_token", "test_refresh_token"]
-        record = storage.Storage(*account)
+        storage.Storage(*account)
+        record = storage.Storage(1)
         assert set(account).issubset(record.tokens)
 
     def test_storage_file_update(self):
