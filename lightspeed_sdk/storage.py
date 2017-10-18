@@ -24,7 +24,7 @@ class Storage:
             Storage.connection = sqlite3.connect(config["sdk"]["db_file"],
                                                  isolation_level=None)
             Storage.cursor = Storage.connection.cursor()
-            self.tokens = self.file(account_id, access_token, refresh_token)
+            self.tokens = self._file(account_id, access_token, refresh_token)
             Storage.connection.commit()
             Storage.connection.close()
         else:
@@ -32,7 +32,7 @@ class Storage:
                             "that does not exist.")
             exit()
 
-    def file(self, account_id, access_token, refresh_token):
+    def _file(self, account_id, access_token, refresh_token):
         """The default file storage method actually uses sqlite.
 
         Create the database and table if they don't exist.
